@@ -8,7 +8,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField]
     private GameObject actualWeapon;
     private float lastSwapTime;
-    public float swapCooldown = 0.3f;
+    public float swapCooldown = 10f;
 
     private void Start()
     {
@@ -23,10 +23,8 @@ public class WeaponManager : MonoBehaviour
             
             if (other.gameObject.CompareTag("Weapon"))
             {
-                Debug.Log("hola");
                 if (Input.GetKey(KeyCode.E))
                 {
-                    Debug.Log("no");
                     Renderer renderer = actualWeapon.GetComponent<Renderer>();
                     Material aux = renderer.material;
                     renderer.material = other.gameObject.GetComponent<Renderer>().material;
