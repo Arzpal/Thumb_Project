@@ -47,7 +47,7 @@ public class PlayerCamera : MonoBehaviour
 
         // Update Camera Rotation 
         Quaternion target = Quaternion.Euler(xRot, yRot, 0);
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 15);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 40);
         orientation.rotation = Quaternion.Euler(0, yRot, 0);
 
         // Update Camera Position 
