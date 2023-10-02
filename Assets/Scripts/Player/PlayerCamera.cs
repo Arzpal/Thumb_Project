@@ -26,7 +26,7 @@ public class PlayerCamera : MonoBehaviour
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
-        fpsText.text = "FPS: " + Mathf.Ceil(fps).ToString();
+        if(fpsText) fpsText.text = "FPS: " + Mathf.Ceil(fps).ToString();
 
         // Mouse Input
         float mouseX = Input.GetAxisRaw("Mouse X") * sensX;
